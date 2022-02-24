@@ -6,13 +6,15 @@
     --secondary-color: #148DE3;
     --white-color: #fff;
     --default-space: 3rem;
-    --light-gray-color: #EEEEEE
+    --light-gray-color: #EEEEEE;
+    --medium-gray-color: #C1CBD2;
 }
 
 /*===================== Elements =======================*/
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html{
@@ -64,7 +66,7 @@ p{
 }
 
 table{
-    min-width: 60rem;
+    min-width: 55rem;
     width: 100%;
     border-collapse: collapse;
 }
@@ -186,7 +188,7 @@ table caption{
 
 .intro-content{
     position: relative;
-    top: -8rem;
+    /*top: -8rem;*/
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     gap: var(--default-space);
@@ -214,7 +216,7 @@ table caption{
 
 .top-three-content{
     max-width: 64rem;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -280,3 +282,199 @@ table caption{
     transform: translate(-3%, 3%) scale(1.2) rotate(5deg); 
 }
 
+/*======================= Contact =====================*/
+
+.contact-form{
+    grid-column: span 2;
+}
+
+.contact img{
+    max-width: 100%;
+    height: auto;
+}
+
+.contact-form .form-grid{
+    border: none;
+    display: flex;
+    flex-flow: row wrap;
+    gap: var(--default-space);
+}
+
+.form-grid legend{
+    font-style: italic;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.form-group{
+    flex: 1 1 32rem;
+}
+
+.form-group label{
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.form-group input, textarea{
+    border: none;
+    background-color: var(--white-color);
+    padding: 1.5rem 2rem;
+    width: 100%;
+    font-size: 3rem;
+    outline: none;
+    border-radius: 2rem;
+}
+
+.form-group input:focus, textarea:focus{
+    box-shadow: 0 0 3rem 0.5rem green;
+}
+
+
+.form-grid .full-width{
+    width: 100%;
+    flex:  1 1 100%;
+}
+
+.form-group button{
+    border: 0.5rem solid var(--white-color);
+    background: none;
+    padding: 1.5rem 2rem;
+    color: var(--white-color);
+    font-size: 3rem;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+    border-radius: 2rem;
+}
+
+.form-group button:hover{
+    background-color: var(--white-color);
+    color: var(--primary-color);
+}
+
+.form-group ::placeholder{
+    color: var(--medium-gray-color);
+}
+
+/*======================= Footer =======================*/
+
+.footer{
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.footer a{
+    color: inherit;
+    text-decoration: none;
+    color: #424649;
+}
+
+.footer p{
+    margin: 0;
+    padding: 3rem;
+}
+
+.heart{
+    color: red;
+}
+
+/*===================== Back To Home =================== */
+
+.back-to-top{
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 5rem;
+    height: 5rem;
+    padding: 3rem;
+    display: flex;
+    border-radius: 50%;
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    box-shadow: 0 0 1rem 0.2rem  var(--primary-color);
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-90deg);
+    font-size: 4rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.back-to-top:hover{
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/*===================== Mobile Menu ====================*/
+
+.close-menu{
+    display: none;
+}
+
+/*====================== Media Queries =================*/
+
+@media (max-width: 800px){
+    .intro-content, .grid-text-content{
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-img{
+        width: 100%;
+        max-height: 100%;
+        max-width: 100%;
+    }
+
+    .gallery-img img{
+        width: 100%;
+    }
+
+    .contact img{
+        width: 0;
+    }
+
+    .menu{
+        bottom: 0;
+    }
+
+    .menu-content, .menu-content ul{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .menu-content{
+        height: 100vh;
+    }
+    
+    .menu{
+        display: none;
+    }
+
+    .close-menu-label::after{
+        content: '☰' ;
+        position: fixed;
+        z-index: 2;
+        top: 2rem;
+        right: 2rem;
+        background-color: var(--primary-color);
+        color: var(--white-color);
+        font-size: 3rem;
+        line-height: 3rem;
+        width: 3rem;
+        height: 3rem;
+        padding: 0.5rem;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .close-menu:checked ~.menu{
+        display: block;
+    }
+
+    .close-menu:checked ~.close-menu-label::after{
+        content: "×";
+    }
+
+    .menu-spacing{
+        display: none;
+    }
+}
