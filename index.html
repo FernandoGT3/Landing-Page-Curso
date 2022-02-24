@@ -18,14 +18,15 @@
     <aside class="menu simple-back">
         <div class="main-content menu-content">
             <h1>
-                <a href="#">LOGO</a>
+                <a href="#home">LOGO</a>
             </h1>
             <nav>
                 <ul>
-                    <li><a href="#">Intro</a></li>
-                    <li><a href="#">Top 3</a></li>
-                    <li><a href="#">Gallery</a></li>
-                    <li><a href="#">Work</a></li>
+                    <li><a href="#intro">Intro</a></li>
+                    <li><a href="#top-3">Top 3</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#pricing">Prices</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
@@ -34,7 +35,7 @@
 
     <div class="menu-spacing"></div>
 
-    <section class="main-back sections intro">
+    <section id="home" class="main-back sections intro">
         <div class="main-content intro-content">
             <div class="intro-text-content">
                 <h2>January brings us Firefox 85</h2>
@@ -50,21 +51,158 @@
         </div>
     </section>
 
-
-    <section class="simple-back sections">
-        <div class="main-content">
-            <h1>teste</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum officiis aspernatur reiciendis vero
-                recusandae! Recusandae possimus cumque sapiente voluptatum deleniti dignissimos repellat placeat,
-                provident, natus iusto aliquid? Quos, tenetur reprehenderit!</p>
+    <section id="intro" class="simple-back sections">
+        <div class="main-content top-three-content">
+            <h2>top 3 jobs</h2>
+            <p>The release of Apple Silicon-based Macs at the end of last year generated a flurry of news coverage and
+                some surprises at the machine’s performance. This post details some background information on the
+                experience of porting Firefox to run natively on these CPUs.
+            </p>
+            <p>We’ll start with some background on the Mac transition and give an overview of Firefox internals that
+                needed to know about the new architecture, before moving on to the concept of Universal Binaries.
+            </p>
+            <p>We’ll then explain how DRM/EME works on the new platform, talk about our experience with macOS Big Sur,
+                and discuss various updater problems we had to deal with. We’ll conclude with the release and an
+                overview of various other improvements that are in the pipeline.
+            </p>
         </div>
     </section>
-    <section class="main-back sections">
-        <div class="main-content">
-            <h1>teste</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum officiis aspernatur reiciendis vero
-                recusandae! Recusandae possimus cumque sapiente voluptatum deleniti dignissimos repellat placeat,
-                provident, natus iusto aliquid? Quos, tenetur reprehenderit!</p>
+
+    <section id="top-3" class="main-back sections grid-one">
+        <div class="main-content grid-content">
+            <h2 class="grid-main-heading">top 3 jobs</h2>
+            <p class="grid-description">Here are some recent work.</p>
+            <div class="grid-text-content">
+                <article>
+                    <h3>First</h3>
+                    <p>This button would add a box to the row of key content boxes below the intro text. This should put
+                        the box there regardless of where the user is currently writing.</p>
+                </article>
+                <article>
+                    <h3>Another site</h3>
+                    <p>I'd suggest having a popup that asks where in the row to insert the box (at the beginning or
+                        end), what title to give the box, what text to put in the box, and where the box should link to.
+                        The entire box should serve as a link to the destination page.</p>
+                </article>
+                <article>
+                    <h3>Third one</h3>
+                    <p>You can also include a type attribute containing the MIME type of the resource, so a browser can
+                        quickly see what resources are on offer, and ignore ones that it doesn’t support</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="simple-back sections grid-one">
+        <div class="grid-content main-content">
+            <h2 class="grid-main-heading">Gallery</h2>
+            <p class="grid-description">Here are some recent work.</p>
+            <div class="grid-text-content">
+                <div class="gallery-img">
+                    <img src="http://source.unsplash.com/random/360x360?r1" alt="random image from unsplash">
+                </div>
+                <div class="gallery-img">
+                    <img src="http://source.unsplash.com/random/360x360?r2" alt="random image from unsplash">
+                </div>
+                <div class="gallery-img">
+                    <img src="http://source.unsplash.com/random/360x360?r3" alt="random image from unsplash">
+                </div>
+                <div class="gallery-img">
+                    <img src="http://source.unsplash.com/random/360x360?r4" alt="random image from unsplash">
+                </div>
+                <div class="gallery-img">
+                    <img src="http://source.unsplash.com/random/360x360?r5" alt="random image from unsplash">
+                </div>
+                <div class="gallery-img">
+                    <img src="http://source.unsplash.com/random/360x360?r6" alt="random image from unsplash">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="work" class="main-back sections grid-one">
+        <div class="main-content grid-content">
+            <h2 class="grid-main-heading">Recent jobs</h2>
+            <p class="grid-description">Here are some recent work.</p>
+            <div class="grid-text-content">
+                <article>
+                    <h3>A good one</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi numquam similique in tempora fuga
+                        necessitatibus, obcaecati eius possimus natus minima commodi magni illo veritatis vel delectus
+                        eos impedit molestiae inventore.</p>
+                </article>
+                <article>
+                    <h3>Great job</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi numquam similique in tempora fuga
+                        necessitatibus, obcaecati eius possimus natus minima commodi magni illo veritatis vel delectus
+                        eos impedit molestiae inventore.</p>
+                </article>
+                <article>
+                    <h3>The best</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi numquam similique in tempora fuga
+                        necessitatibus, obcaecati eius possimus natus minima commodi magni illo veritatis vel delectus
+                        eos impedit molestiae inventore.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="simple-back sections">
+        <div class="main-content top-three-content">
+            <h2>Pricing</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor autem aliquam itaque, commodi ex
+                dignissimos delectus ipsa quibusdam magni minus sed mollitia ea totam repellat repellendus alias
+                necessitatibus voluptate deserunt!
+            </p>
+            <div class="responsive-table">
+                <table>
+                    <caption>Pricing Table</caption>
+                    <thead>
+                        <tr>
+                            <th>Title 1</th>
+                            <th>Title 2</th>
+                            <th>Title 3</th>
+                            <th>Title 4</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Content 1</td>
+                            <td>Content 2</td>
+                            <td>Content 3</td>
+                            <td>Content 4</td>
+                        </tr>
+                        <tr>
+                            <td>Content 1</td>
+                            <td>Content 2</td>
+                            <td>Content 3</td>
+                            <td>Content 4</td>
+                        </tr>
+                        <tr>
+                            <td>Content 1</td>
+                            <td>Content 2</td>
+                            <td>Content 3</td>
+                            <td>Content 4</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Span Down</td>
+                            <td>Content 2</td>
+                            <td>Content 3</td>
+                            <td>Content 4</td>
+                        </tr>
+                        <tr>
+                            <td>Content 2</td>
+                            <td>Content 3</td>
+                            <td>Content 4</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4"> Footer 1</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
         </div>
     </section>
 

@@ -17,6 +17,7 @@
 
 html{
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -36,7 +37,10 @@ h1{
 }
 
 h2{
-    font-size: 5.5rem;
+    font-size: 6rem;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    line-height: 1.2;
 }
 
 h3{
@@ -55,6 +59,39 @@ h6{
     font-size: 3.5rem;
 }
 
+p{
+    margin-bottom: 3rem;
+}
+
+table{
+    min-width: 60rem;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table td, table th{
+    border: 0.1rem solid var(--light-gray-color);
+    text-align: left;
+    padding: 1rem;
+}
+
+thead th, tfoot td{
+    background-color: var(--light-gray-color);
+}
+
+table caption{
+    font-style: italic;
+    font-size: 1.6rem;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.responsive-table{
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+
 /* ======================== Components =====================*/
 
 .main-back{
@@ -68,12 +105,13 @@ h6{
     background-color: var(--white-color);
     background-size: cover;
     background-position: center center;
+    color: var(--primary-color);
 }
 
 .main-content{
     margin: 0 auto;
     max-width: 120rem;
-    padding: var(--default-space);
+    padding: 10rem var(--default-space);
 }
 
 .sections{
@@ -144,7 +182,7 @@ h6{
     left: 25%;
 }
 
-/*========================= Intro ====================*/
+/*========================= Home-Intro ====================*/
 
 .intro-content{
     position: relative;
@@ -152,7 +190,7 @@ h6{
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     gap: var(--default-space);
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .intro-text-content, .intro-img-content {
@@ -171,3 +209,74 @@ h6{
     max-width: 100%;
     height: auto;
 }
+
+/*========================= Top 3 - Text ===================*/
+
+.top-three-content{
+    max-width: 64rem;
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    text-align: center;
+}
+
+/*========================= Top 3 - Grid ===================*/
+
+.grid-content{
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.grid-main-heading{
+    margin-bottom: 1.5rem;
+}
+
+.grid-description{
+    padding-bottom: 8rem;
+}
+
+.grid-text-content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--default-space);
+    counter-reset: grid-counter;
+}
+
+.grid-text-content h3{
+    font-size: 3rem;
+    position: relative;
+    padding-left: 6.5rem;
+    padding-bottom: 2rem;
+}
+
+.grid-text-content h3::before{
+    counter-increment: grid-counter;
+    content: counter(grid-counter);
+    position: absolute;
+    font-size: 8rem;
+    font-style: italic;
+    top: -4rem;
+    left: -1.5rem;
+    transform: rotate(5deg);
+}
+
+/*======================== Gallery =======================*/
+
+.gallery-img{
+    width: 100%;
+    max-width: 36rem;
+    max-height: 36rem;
+    overflow: hidden;
+}
+
+.gallery-img img{
+    transition: all 300ms ease-in-out;
+}
+
+.gallery-img img:hover{
+    transform: translate(-3%, 3%) scale(1.2) rotate(5deg); 
+}
+
